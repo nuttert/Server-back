@@ -1,0 +1,6 @@
+/Users/vlad/Desktop/VSCode/Test1/build/CMakeFiles/rebuild_cache.dir
+/Users/vlad/Desktop/VSCode/Test1/build/CMakeFiles/edit_cache.dir
+/Users/vlad/Desktop/VSCode/Test1/build/CMakeFiles/PROJECT.dir
+/Users/vlad/Desktop/VSCode/Test1/build/Matr/CMakeFiles/rebuild_cache.dir
+/Users/vlad/Desktop/VSCode/Test1/build/Matr/CMakeFiles/edit_cache.dir
+/Users/vlad/Desktop/VSCode/Test1/build/Matr/CMakeFiles/Matr.dir

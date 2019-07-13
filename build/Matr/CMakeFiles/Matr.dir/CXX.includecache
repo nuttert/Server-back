@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/vlad/Desktop/VSCode/Test1/Matr/matr.cpp
+matr.hpp
+/Users/vlad/Desktop/VSCode/Test1/Matr/matr.hpp
+
+/Users/vlad/Desktop/VSCode/Test1/Matr/matr.hpp
+iostream
+-
+
