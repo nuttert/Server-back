@@ -9,6 +9,20 @@
             "type": "shell",
             "group": "build",
             "problemMatcher": "$gcc"
+        },
+        {
+            "label": "run",
+            "command": "./build/PROJECT",
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "build and run",
+            "command": "cd .vscode \n chmod ugo+x build.sh\n ./build.sh \n cd ../ \n./build/PROJECT",
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": "$gcc"
         }
     ]
 }

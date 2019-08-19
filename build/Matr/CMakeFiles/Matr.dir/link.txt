@@ -1,2 +1,0 @@
-/usr/bin/ar qc libMatr.a  CMakeFiles/Matr.dir/matr.cpp.o
-/usr/bin/ranlib libMatr.a

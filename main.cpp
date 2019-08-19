@@ -1,17 +1,24 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
-#include "Matr/matr.hpp"
+#include <atomic>
+#include <thread>
+#include <yaml-cpp/yaml.h>
+#include <fstream>
+#include <exception>
+#include "Configs/configs.hpp"
+#include "Server/server.hpp"
 
 
-int main()
-{
-    A obj;
-    obj.func();
-    int a = 0;
-    std::cout << "ABCCCCCC" << a << std::endl;
-    return 0;//32
+
+int main(){
+  // using Server = yaml::configs::Server;
+  // auto config = yaml::configs::Config<Server>("Configs/config.yaml");
+  // const auto server = config.GetServer();
+  // std::cout << server.GetName() << server.GetIpv4();
+  server::Server server{};
+  server.Start();
+  return 0;
 }
 
 
-    
