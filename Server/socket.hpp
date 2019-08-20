@@ -1,15 +1,11 @@
 #pragma once
-#include <arpa/inet.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <sys/un.h>
-#include <sys/types.h>
-#include <sys/time.h>
+
 #include <set>
 #include <map>
 
-namespace socket_space{
+namespace socket{
+
+
 
 struct Socket{
 public:
@@ -85,4 +81,5 @@ public:
     Set set_of_clients{};
     size_t max_number_of_descriptors{0};
 };
+
 }

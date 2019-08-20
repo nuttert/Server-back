@@ -2,7 +2,7 @@
 #include "socket.hpp"
 #include <string>
 
-namespace socket_space{
+namespace socket{
 namespace reader{
 
 struct Reader{

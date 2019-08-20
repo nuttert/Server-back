@@ -64,7 +64,7 @@ void ServerImplementation::setNewClient(){
 void ServerImplementation::handleOldClients(){
   for(auto client:active_clients){
     if(client == listener) continue;
-    const auto reader = socket_space::reader::Reader(client);
+    const auto reader = socket::reader::Reader(client);
     const auto text = reader.Read();
     std::cout<<text << std::endl;
     if(text.empty()){

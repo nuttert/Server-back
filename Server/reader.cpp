@@ -4,7 +4,7 @@
 #include <sys/filio.h>
 #include <vector>
 
-namespace socket_space{
+namespace socket{
 namespace reader{
 Reader::Reader(const Socket& socket):socket(socket){}
 

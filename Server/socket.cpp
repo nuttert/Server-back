@@ -3,7 +3,8 @@
 #include <errno.h>
 #include <iostream>
 
-namespace socket_space{
+namespace socket{
+
 
 const Socket::NativeConnectionType Socket::native_types{
 {ConnectionType::kTCP, SOCK_STREAM},

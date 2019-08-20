@@ -33,11 +33,11 @@ ServerImplementation(size_t port = 8080);
   void setNewClient();
   void handleOldClients();
 private:
-  socket_space::ListenerSocket listener;
+  socket::ListenerSocket listener;
   size_t port;
   const size_t kMaximumClients{10};
   size_t max_file_descriptor{0};
-  socket_space::SetOfSockets all_clients, active_clients;
+  socket::SetOfSockets all_clients, active_clients;
   std::atomic_bool servise_is_ready{true};
 };
 
