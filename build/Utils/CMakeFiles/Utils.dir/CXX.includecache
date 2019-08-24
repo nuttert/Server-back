@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/vlad/Desktop/VSCode/Server-back/Utils/literal_operators.cpp
+literal_operators.hpp
+/Users/vlad/Desktop/VSCode/Server-back/Utils/literal_operators.hpp
+
+/Users/vlad/Desktop/VSCode/Server-back/Utils/literal_operators.hpp
+string
+-
+
