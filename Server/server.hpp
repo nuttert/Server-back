@@ -1,45 +1,16 @@
 #pragma once
-#include <memory>
-#include "socket.hpp"
-#include "exceptions.hpp"
+#include "server_base.hpp"
 
-namespace server{
+namespace server
+{
 
-struct ServerImplementation;
+struct Server:ServerBase{
+using ServerBase::ServerBase;
 
-struct Server{
-public:
-  Server() = default;
-  Server(size_t port);
-  void Start();
-  void Stop();
-private:
-  std::unique_ptr<ServerImplementation> server;
-  size_t port = 8080;
+  void Handler(SocketPtr socket) override final;
+
 };
 
 
-struct ServerImplementation{
-private:
-  using  Timer = timeval;
-  using Address = sockaddr_in;
-public:
-ServerImplementation(size_t port = 8080);
-  void start();
-  void stop();
-  void socketBinding();
-  void serverIsGoingToListen();
-  void weedOutPassiveClients();
-  void setNewClient();
-  void handleOldClients();
-private:
-  socket::ListenerSocket listener;
-  size_t port;
-  const size_t kMaximumClients{10};
-  size_t max_file_descriptor{0};
-  socket::SetOfSockets all_clients, active_clients;
-  std::atomic_bool servise_is_ready{true};
-};
 
 }
-

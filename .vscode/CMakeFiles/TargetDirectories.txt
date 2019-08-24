@@ -1,9 +1,0 @@
-/Users/vlad/Desktop/VSCode/Server-back/.vscode/CMakeFiles/rebuild_cache.dir
-/Users/vlad/Desktop/VSCode/Server-back/.vscode/CMakeFiles/edit_cache.dir
-/Users/vlad/Desktop/VSCode/Server-back/.vscode/CMakeFiles/PROJECT.dir
-/Users/vlad/Desktop/VSCode/Server-back/.vscode/Configs/CMakeFiles/rebuild_cache.dir
-/Users/vlad/Desktop/VSCode/Server-back/.vscode/Configs/CMakeFiles/edit_cache.dir
-/Users/vlad/Desktop/VSCode/Server-back/.vscode/Configs/CMakeFiles/Configs.dir
-/Users/vlad/Desktop/VSCode/Server-back/.vscode/Server/CMakeFiles/rebuild_cache.dir
-/Users/vlad/Desktop/VSCode/Server-back/.vscode/Server/CMakeFiles/edit_cache.dir
-/Users/vlad/Desktop/VSCode/Server-back/.vscode/Server/CMakeFiles/Server.dir
