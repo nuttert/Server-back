@@ -23,6 +23,5 @@ int main()
   yaml::configs::ConfigsManager configs(server_info);
   const auto structure = configs.GetStructure(server_info);
   std::cout << structure->GetIpv4();
-
   return 0;
 }
