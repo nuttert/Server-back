@@ -1,3 +1,5 @@
 Server :
   name: "bot"
-  ipv4: "192.168.0.1"
+  port: 8080
+  address type: ipV4
+  amount of service threads: 10

@@ -195,12 +195,16 @@ template <
     template <typename... Structures>
     typename StructuresContainer,
 
-    typename... Structures>
-auto MultiIndexConstructorFromStructures(BaseStructure, StructuresContainer<Structures...>)
+    typename... Structures
+    >
+auto MultiIndexConstructorFromStructures
+(BaseStructure, StructuresContainer<Structures...>)
     -> boost::multi_index_container<BaseStructure,
                                     IndexiesBy<
                                         IndexiesForManyStructures<
                                             StructuresContainer<Structures...>>>>;
+
+
 
 } // namespace
 

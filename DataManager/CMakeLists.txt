@@ -3,5 +3,6 @@ cmake_minimum_required(VERSION 3.0.0)
 file(GLOB_RECURSE _SOURSCES "*.cpp")
 file(GLOB_RECURSE _HEADERS "*.hpp")
 
-add_library(Server STATIC ${_SOURSCES} ${_HEADERS})
-target_include_directories(Server PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..)
+add_library(Data STATIC ${_SOURSCES} ${_HEADERS})
+target_include_directories(Data PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..)
+

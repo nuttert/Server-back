@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libServer.a  CMakeFiles/Server.dir/Core/server_base.cpp.o CMakeFiles/Server.dir/server.cpp.o CMakeFiles/Server.dir/thread_pool.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libServer.a

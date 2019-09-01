@@ -13,11 +13,13 @@ class ConfigManager : public ci::ConfigManagerInterface
 public:
   using Document = typename DocumentInfo::Structure;
   using DocumentPtr = std::shared_ptr<Document>;
-
 public:
-  ConfigManager(const DocumentInfo &document_info);
 
-  const DocumentPtr GetStructure() const;
+  ConfigManager();
+
+
+void LoadFile();
+  const DocumentPtr GetStructure() const noexcept;
 
 private:
   DocumentPtr document_;
@@ -30,13 +32,12 @@ class ConfigsManager
   using ConfigManagerInterfacePtr = std::shared_ptr<ci::ConfigManagerInterface>;
   using Container = utils::containers::MultiIndexContainer<ConfigManagerInterfacePtr, ci::ConfigManagerInterface>;
   using ContainerPtr = std::unique_ptr<Container>;
-
 public:
-  ConfigsManager(const DocumentsInfo &... documents_info);
+  ConfigsManager();
 
   template <typename DocumentInfo,
             typename Document = typename DocumentInfo::Structure>
-  const std::shared_ptr<Document> GetStructure(const DocumentInfo &document_info) const;
+  const std::shared_ptr<Document> GetStructure() const;
 
 private:
   Container configs_managers{};
