@@ -1,2 +1,3 @@
 ThreadPool:
-  amount of threads: 10
+  main task processor:
+    amount of threads: 10

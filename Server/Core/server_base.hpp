@@ -21,6 +21,7 @@ struct ServerBase
   using AddressInfo = TCP::endpoint;
 
   using Service = asio::io_service;
+  using Services = std::vector<Service>;
 
   using Acceptor = TCP::acceptor;
   using AcceptorPtr = std::shared_ptr<Acceptor>;
@@ -37,6 +38,7 @@ struct ServerBase
   using ConfigPtr = std::shared_ptr<Config>;
 
   using Processor = processor::TaskProcessor;
+  using Work = Service::work;
 public:
   ServerBase(const data::DataManager& data_manager);
   size_t GetPort() const;
@@ -46,15 +48,22 @@ public:
 private:
   void SetAcceptor();
   void AsyncServicesLauncher();
+
   virtual void Handler(SocketPtr socket) = 0;
 
+  size_t GetIndexOfServiceForWorking();
+  Service& GetfServiceForWorking();
 private:
   AddressInfo address_info{};
-  Service service;
+  Service main_service;//for acceptor
+  Services services_for_sockets;//to work with clients
   AcceptorPtr acceptor;
-  size_t kNumberOfServices;
+  
   ConfigPtr config;
   Processor processor;
+
+  size_t kNumberOfServiceThreadsForAccepting;
+  size_t kNumberOfServicesForWorking;
 };
 
 }

@@ -4,18 +4,25 @@
 
 namespace{
   namespace ba = boost::asio;
+  namespace yc = yaml::configs;
 }
 
 namespace processor{
-  TaskProcessor::TaskProcessor(const data::DataManager& data_manager){
+  TaskProcessor::TaskProcessor(const data::DataManager& data_manager, const ProcessorType type){
     const auto configs =  data_manager.GetConfigs();
     auto thread_pool_config_strucutre = configs->GetStructure<yaml::configs::ThreadPoolInfo>();
-    thread_pool = std::make_shared<pools::ThreadPool>(thread_pool_config_strucutre);
+    const auto& name = yc::ThreadPool::processor_types_names.at(type);
+
+    thread_pool_ptr = std::make_shared<pools::ThreadPool>(thread_pool_config_strucutre, name);
   }
 
-template<typename Task>
-  void TaskProcessor::ToThread(Task& task){
-      ba::post(thread_pool, task); 
+  void TaskProcessor::ToThread(const Task& task){
+      if(!thread_pool_ptr)
+           std::runtime_error("Need to initialize thread_pool!");
+      thread_pool_ptr->ToThread(task);
   }
+
+
+ 
 
 }

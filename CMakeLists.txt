@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 3.0.0)
 project(PROJECT VERSION 0.1.0)
 
 #Год плюсов
-set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++17)
-SET(CMAKE_CXX_COMPILER /usr/bin/g++)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-stdlib=libc++ -std=c++17")
 
 
 #Ищем все исполняемые файлы
@@ -13,7 +12,7 @@ file(GLOB _HEADERS "*.hpp")
 
 #Добавляем в сборку исполняемые файлы
 add_executable(${PROJECT_NAME} ${_SOURSCES})
-#target_compile_options(${PROJECT_NAME} PUBLIC -lc++fs /usr/local/Cellar/llvm/7.0.1/lib/)
+
 ##########
 find_package(YAML-CPP) 
 

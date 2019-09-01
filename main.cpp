@@ -49,31 +49,12 @@ using Cont = boost::multi_index_container<
 
 int main()
 {
-  // Cont cont;
-  // cont.emplace(C{});
-  // cont.emplace(B{});
-  // cont.emplace(B{});
-
-
-  // for (const auto list : cont)
-  // {
-  //   std::cout << list.name;
-  // }
-  // std::cout << std::endl;
-  std::cout << std::endl;
   data::DataManager data;
   data.LoadConfigs();
-  auto configs = data.GetConfigs();
-
-  auto structure1 = configs->GetStructure<yaml::configs::ThreadPoolInfo>();
-  auto structure2 = configs->GetStructure<yaml::configs::ThreadPoolInfo>();
-  std::cout << structure1->amount_of_threads;
-  std::cout << structure2->amount_of_threads;
 
   server::Server processor(data);
 
   processor.Start();
 
-  // std::cout << structure->GetPort();
   return 0;
 }

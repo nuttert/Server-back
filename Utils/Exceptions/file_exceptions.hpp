@@ -54,5 +54,13 @@ struct CannotConstructConfig: public std::exception{
   }
   const std::string message{};
 };
+
+struct CannotReadFromSocket: public std::exception{
+  CannotReadFromSocket(const std::string& message):message(message){}
+ const char* what() const noexcept override {
+   return message.c_str();
+  }
+  const std::string message{};
+};
 } // namespace exceptions
 

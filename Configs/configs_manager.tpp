@@ -35,7 +35,6 @@ void ConfigManager<DocumentInfo>::LoadFile(){
   {
   
     root = YAML::LoadFile(document_info.GetPath());
-    std::cout << "LOAD CONFIG: " << document_info.GetName();
   }
   catch (const std::exception &except)
   {
