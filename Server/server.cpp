@@ -16,9 +16,9 @@ void Server::Handler(SocketPtr socket)
   boost::system::error_code error;
   size_t length = socket->read_some(asio::buffer(buffer), error);
 
-  std::cout << "LENGTH" << length<<std::endl;
+  std::cout << "LENGTH :" << length<<std::endl;
   if (error){
-      std::cout << "ERROR" << error.message() << std::endl;
+      std::cout << "ERROR: " << error.message() << std::endl;
       return; // Connection closed
   }
   std::cout << "NEW THREAD: "<< std::this_thread::get_id()<< std::endl;

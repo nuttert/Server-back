@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libConfigs.a  CMakeFiles/Configs.dir/structures/Server/server.cpp.o CMakeFiles/Configs.dir/structures/Server/server_info.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libConfigs.a

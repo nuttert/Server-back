@@ -1,4 +1,7 @@
 #include "server_info.hpp"
+#include <boost/filesystem/path_traits.hpp>
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/operations.hpp>
 
 namespace yaml::configs
 {

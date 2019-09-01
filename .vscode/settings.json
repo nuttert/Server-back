@@ -79,6 +79,9 @@
     "iomanip": "cpp",
     "typeindex": "cpp",
     "*.tpp": "cpp",
-    "__memory": "cpp"
+    "__memory": "cpp",
+    "queue": "cpp",
+    "stack": "cpp",
+    "strstream": "cpp"
   }
 }

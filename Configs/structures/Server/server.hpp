@@ -8,29 +8,34 @@ namespace yaml::configs
 
 class Server
 {
-  enum class Properties;
-  using PropertiesNames = std::map<Properties, std::string>;
-
-private:
+public:
   enum class Properties
   {
     kName,
-    kIpv4
+    kPort,
+    kAddressType,
+    kAmountOfServiceThreads,
+    kIpV6,
+    kIpV4
   };
+  enum class AddressType
+  {
+    kV4,
+    kV6
+  };
+
+private:
+  using PropertiesNames = std::map<Properties, std::string>;
 
 public:
   Server() = default;
   Server(const YAML::Node &node);
 
-  const std::string GetIpv4() const;
-
-private:
-  std::string GetPropertyName(Properties property) const;
-
-private:
+public:
   std::string server_name;
-  std::string ipv4;
+  AddressType address_type;
   size_t port;
+  size_t amount_of_service_threads;
   static const PropertiesNames properties_names;
 };
 
