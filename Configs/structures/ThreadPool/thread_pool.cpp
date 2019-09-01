@@ -14,7 +14,10 @@ ThreadPool::ThreadPool(const YAML::Node &node)
   const auto &kAmountOfThreads = properties_names.at(Properties::kAmountOfThreads);
   try
   {
-    amount_of_threads = node[kAmountOfThreads].as<size_t>();
+    for(const auto& [kType, kTypeName]: processor_types_names){
+      const auto current_type = node[kTypeName];
+      type_to_size[kTypeName] = current_type[kAmountOfThreads].as<size_t>();
+    }
   }
   catch (const std::exception &except)
   {
@@ -24,5 +27,9 @@ ThreadPool::ThreadPool(const YAML::Node &node)
 
 const ThreadPool::PropertiesNames ThreadPool::properties_names{
     {Properties::kAmountOfThreads, "amount of threads"}};
+
+  const ThreadPool::MapProcessorTypeToSting ThreadPool::processor_types_names{
+    {ProcessorType::kMain,"main task processor"}
+  };
 
 } // namespace yaml::configs

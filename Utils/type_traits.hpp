@@ -24,7 +24,7 @@ struct Conunctions<arg>
 template <bool arg, bool... args>
 struct Disunctions
 {
-  static constexpr bool value = arg | Conunctions<args...>::value;
+  static constexpr bool value = arg | Disunctions<args...>::value;
 };
 
 template <bool arg>

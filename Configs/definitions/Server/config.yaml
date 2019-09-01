@@ -2,4 +2,5 @@ Server :
   name: "bot"
   port: 8080
   address type: ipV4
-  amount of service threads: 10
+  amount of service threads for accepting: 10
+  amount of services for working: 10

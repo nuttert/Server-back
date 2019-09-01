@@ -14,7 +14,8 @@ public:
     kName,
     kPort,
     kAddressType,
-    kAmountOfServiceThreads,
+    kAmountOfServiceThreadsForAccepting,
+    kAmountOfServicesForWorking,
     kIpV6,
     kIpV4
   };
@@ -35,7 +36,8 @@ public:
   std::string server_name;
   AddressType address_type;
   size_t port;
-  size_t amount_of_service_threads;
+  size_t amount_of_service_threads_for_accepting;
+  size_t amount_of_services_for_working;
   static const PropertiesNames properties_names;
 };
 

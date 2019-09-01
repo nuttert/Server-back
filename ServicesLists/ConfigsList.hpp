@@ -5,9 +5,12 @@
 #include <Configs/structures/ThreadPool/thread_pool_info.hpp>
 #include <Configs/structures/ThreadPool/thread_pool.hpp>
 
+#include <Configs/structures/Reader/reader.hpp>
+#include <Configs/structures/Reader/reader_info.hpp>
+
 #include <Configs/configs_manager.hpp>
 
 
 namespace yaml::configs::list{
-  using ConfigsManager = yaml::configs::ConfigsManager<ThreadPoolInfo, ServerInfo>;
+  using ConfigsManager = yaml::configs::ConfigsManager<ThreadPoolInfo, ServerInfo, ReaderInfo>;
 }
